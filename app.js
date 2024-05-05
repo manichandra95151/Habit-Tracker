@@ -4,6 +4,7 @@ const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const session = require('express-session');
+var cors = require('cors');
 
 const app = express();
 
@@ -16,6 +17,7 @@ mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
     .catch(err => console.log(err));
 
 //-----EJS---------//
+app.use(cors())
 app.use(expressLayouts);
 app.use("/assets", express.static('./assets'));
 app.set('view engine', 'ejs');
