@@ -1,0 +1,61 @@
+<!-- Login View -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#141414]">
+
+  
+<header class="flex h-20 w-full items-center justify-between px-4 md:px-6 bg-[#141414] text-white fixed top-0">
+  <a href="/" class="flex items-center gap-2" href="#">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="38"
+      height="50"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="h-6 w-6"
+    >
+      <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+    </svg>
+    <span class="font-semibold text-xl">Habit Tracker</span>
+  </a>
+</header>
+  <div class="flex min-h-screen items-center justify-center bg-[#141414] py-12 px-4 sm:px-6 lg:px-8">
+    <div class="w-full max-w-md">
+      <div class="rounded-lg border bg-card text-card-foreground shadow-sm space-y-8 p-8">
+        <div>
+          <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-white">Login</h2>
+        </div>
+        <form action="/users/login" method="POST" class="space-y-6">
+          <div>
+            <label for="email" class="block text-sm font-medium text-[#b3b3b3] dark:text-[#b3b3b3]">Email address</label>
+            <div class="mt-1">
+              <input id="email" autocomplete="email" required class="block w-full appearance-none rounded-md border border-[#333333] px-3 py-2 placeholder-[#737373] shadow-sm focus:border-[#e50914] focus:outline-none focus:ring-[#e50914] dark:border-[#333333] dark:bg-[#333333] dark:text-[#b3b3b3] dark:placeholder-[#737373]" type="email" name="email" placeholder="Enter Email" />
+            </div>
+          </div>
+          
+          <div>
+            <button type="submit" class="group relative flex w-full justify-center rounded-md border border-transparent bg-[#e50914] py-2 px-4 text-sm font-medium text-white hover:bg-[#c40612] focus:outline-none focus:ring-2 focus:ring-[#e50914] focus:ring-offset-2 dark:bg-[#e50914] dark:hover:bg-[#c40612] dark:focus:ring-[#e50914]">
+              Login
+            </button>
+          </div>
+        </form>
+        <div class="text-center text-sm text-[#737373] dark:text-[#737373]">
+          <p>New User? <a href="/users/register" class="font-medium text-[#e50914] hover:text-[#c40612] dark:text-[#e50914] dark:hover:text-[#c40612]">Register</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
